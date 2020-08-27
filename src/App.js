@@ -11,8 +11,12 @@ export default class App extends React.PureComponent {
 
   componentDidMount() {
     fetch("https://statsapi.web.nhl.com/api/v1/standings")
-      .then(response => response.json())
-      .then(data => this.setState({ teams: data.records }));
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        return this.setState({ teams: data.records })
+      });
   }
 
   render() {
