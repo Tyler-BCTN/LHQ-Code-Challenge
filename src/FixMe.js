@@ -16,7 +16,7 @@ const players = [
 ]
 function GetPlayerIds() {
   const ids =  players.map((x) => {
-    if (x.fpts < topValue) {
+    if (x.fpts > topValue) {
       topValue = x.fpts;
     }
     topPlayers.push(x.fpts > 10? x : null);
